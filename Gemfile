@@ -38,8 +38,8 @@ gem 'rails-footnotes', '>= 4.0.0', '<5'
 # rails g rails_footnotes:install
 
 gem 'simple_form'
-#rails generate simple_form:install
-#rails generate simple_form:install --bootstrap
+# rails generate simple_form:install
+# rails generate simple_form:install --bootstrap
 
 gem 'devise'
 # $ rails generate devise:install
