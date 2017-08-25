@@ -1,0 +1,2 @@
+class CitiesExtended < ApplicationRecord
+end

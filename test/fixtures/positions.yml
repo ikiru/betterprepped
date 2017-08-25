@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  position: MyString
+  interview: one
+  business: one
+
+two:
+  position: MyString
+  interview: two
+  business: two
