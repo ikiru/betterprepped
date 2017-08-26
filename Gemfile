@@ -30,7 +30,9 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+
 gem 'hirb'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'bootstrap-sass'
 gem 'carrierwave'
 gem 'validates_timeliness', '~> 4.0'
