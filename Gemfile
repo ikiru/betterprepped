@@ -41,8 +41,8 @@ gem 'simple_form'
 # rails generate simple_form:install
 # rails generate simple_form:install --bootstrap
 
-gem 'devise'
-# $ rails generate devise:install
+# Standard Auth0 requirements
+gem 'doorkeeper'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
