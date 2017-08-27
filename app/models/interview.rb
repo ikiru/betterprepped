@@ -1,5 +1,9 @@
 class Interview < ApplicationRecord
-  belongs_to :position
-  belongs_to :interview_type
-  belongs_to :interview_question
+  belong_to :Position
+  belong_to :InterviewType
+  belong_to :Business
+
+  ########## validation #########
+  validates :round presence: true
+  validates :comment presence: true
 end

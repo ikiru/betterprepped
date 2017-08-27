@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
-
+  resources :interviews
   use_doorkeeper
+
   root to: 'pages#index'
   get '/dashboard' => 'dashboard#index'
+  get '/admin' => 'admin#index'
 
   resources :users, only: [:new, :create]
   resources :sessions, only: [:new, :create]
   delete '/logout', to: 'sessions#destroy', as: :logout
 
   resources :questions
-  resources :interviews
   resources :interview_types
   resources :positions
   resources :project_catagories

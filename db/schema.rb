@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170826000232) do
+ActiveRecord::Schema.define(version: 20170826210329) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,14 +39,10 @@ ActiveRecord::Schema.define(version: 20170826000232) do
   end
 
   create_table "interviews", force: :cascade do |t|
-    t.string "interview_number"
-    t.bigint "position_id"
-    t.bigint "interview_type_id"
-    t.text "interview_comments"
+    t.string "round"
+    t.string "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["interview_type_id"], name: "index_interviews_on_interview_type_id"
-    t.index ["position_id"], name: "index_interviews_on_position_id"
   end
 
   create_table "positions", force: :cascade do |t|
@@ -64,11 +60,8 @@ ActiveRecord::Schema.define(version: 20170826000232) do
   end
 
   create_table "question_catagories", force: :cascade do |t|
-    t.string "question"
-    t.bigint "report_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["report_id"], name: "index_question_catagories_on_report_id"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -91,8 +84,5 @@ ActiveRecord::Schema.define(version: 20170826000232) do
     t.index ["email"], name: "index_users_on_email"
   end
 
-  add_foreign_key "interviews", "interview_types"
-  add_foreign_key "interviews", "positions"
   add_foreign_key "positions", "businesses"
-  add_foreign_key "question_catagories", "reports"
 end

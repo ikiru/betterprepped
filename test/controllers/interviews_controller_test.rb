@@ -17,7 +17,7 @@ class InterviewsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create interview" do
     assert_difference('Interview.count') do
-      post interviews_url, params: { interview: { interview_comments: @interview.interview_comments, interview_number: @interview.interview_number, interview_question_id: @interview.interview_question_id, interview_type_id: @interview.interview_type_id, position_id: @interview.position_id } }
+      post interviews_url, params: { interview: { comment: @interview.comment, round: @interview.round } }
     end
 
     assert_redirected_to interview_url(Interview.last)
@@ -34,7 +34,7 @@ class InterviewsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update interview" do
-    patch interview_url(@interview), params: { interview: { interview_comments: @interview.interview_comments, interview_number: @interview.interview_number, interview_question_id: @interview.interview_question_id, interview_type_id: @interview.interview_type_id, position_id: @interview.position_id } }
+    patch interview_url(@interview), params: { interview: { comment: @interview.comment, round: @interview.round } }
     assert_redirected_to interview_url(@interview)
   end
 

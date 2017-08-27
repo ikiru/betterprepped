@@ -1,3 +1,6 @@
 class QuestionCatagory < ApplicationRecord
-  belongs_to :report
+  has_many :Questions
+
+  ########## validation #########
+  validates :question presence: true
 end

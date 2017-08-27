@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+vagrclass UsersController < ApplicationController
   def new
     @user = User.new
   end
